@@ -30,7 +30,7 @@ for(let i of x){ y.push(Math.abs(i))}
 JSON.stringify(y);
 ```
 
-Using the above raw codes we can use the function `sendRaw` from IRRemote to send the signal to the IR leds.
+Using the above raw codes we can use the function `sendRaw` from IRRemote to send the signal to the IR leds. I use raw codes because I find them to work more reliably. 
 
 I recommend making a shield for the Arduino if you have a lot of codes to decode instead of wiring up a breadboard every time.
 
