@@ -1,7 +1,7 @@
 IR Remote with ESP8266 (Wemos D1 mini)
 
 Motivation: to be able to control my AC and lights when I'm away from home.
-For example: to cool my room if I'm comming home on a hot summer day or to turn on the light automatically on a certain time.
+For example: to cool my room if I'm coming home on a hot summer day or to turn on the light automatically on a certain time.
 
 # Read the AC remote codes
 Parts: 
@@ -28,6 +28,10 @@ JSON.stringify(y);
 
 Using the above raw codes we can use the function `sendRaw` from IRRemote to send the signal to the IR leds.
 
+I recommend making a shield for the Arduino if you have a lot of codes to decode instead of wiring up a breadboard every time.
+
+![img](https://i.imgur.com/cy1pZi0.jpg)
+
 
 
 # Send IR Signals 
@@ -51,17 +55,37 @@ There's also an option in Blynk to switch a virtual pin based on location.
 
 This is the diagram to make the shield that will sit on the Wemos with the IR leds.
 
-=== 
+![img](https://i.imgur.com/PwBHFYo.png)
 
 I needed the transistor driver circuit to amplify the signal because I have several leds and the AC is far from the leds, it might work for you without the transistor circuit though.
 
 This is how it looks soldered. 
 
-=== 
+![img](https://i.imgur.com/tAC3zU7.jpg)
+
+![img](https://i.imgur.com/ZABONEF.jpg)
 
 
 
+That's the TO-92 case diagram for the transistor:
+
+![img](https://i.imgur.com/KKn0yhk.png)
 
 
 
+This is how you connect it to the leds: 
+
+![img](https://i.imgur.com/dC13auG.jpg)
+
+
+
+I'm still waiting for the sockets to arrive. I ordered these: 
+
+https://www.aliexpress.com/item/20-sets-2pin-2-54mm-Pitch-10cm-26AWG-Wire-Pin-Header-Housing-Terminal-Connector-Wire-Connectors/32800965681.html?spm=a2g0s.9042311.0.0.BGoQSD
+
+
+
+Notes:
+
+To check if the IR led is working, view it with your phone's camera when it's transmitting. 
 
