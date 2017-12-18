@@ -92,4 +92,4 @@ https://www.aliexpress.com/item/20-sets-2pin-2-54mm-Pitch-10cm-26AWG-Wire-Pin-He
 Notes:
 
 To check if the IR led is working, view it with your phone's camera when it's transmitting. 
-
+This circuit is easy to extend to work with more leds. 
