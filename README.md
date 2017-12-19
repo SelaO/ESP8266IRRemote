@@ -61,6 +61,14 @@ This is the diagram to make the shield that will sit on the Wemos with the IR le
 
 ![img](https://i.imgur.com/PwBHFYo.png)
 
+The calculation for the resistor values was:
+
+$(Vcc - Vled)/I = (5 - 1.4)/0.1 = 36 Ohms$
+
+collector current/Hfe = 0.1/30 = 3.3 mA, 
+
+$(3.3 - 0.7)/.0033 = 788 Ohms$ but to keep the transistor saturated I used a lower value. 
+
 I needed the transistor driver circuit to amplify the signal because I have several leds and the AC is far from the leds, it might work for you without the transistor circuit though.
 
 This is how it looks soldered. 
@@ -92,4 +100,5 @@ https://www.aliexpress.com/item/20-sets-2pin-2-54mm-Pitch-10cm-26AWG-Wire-Pin-He
 Notes:
 
 To check if the IR led is working, view it with your phone's camera when it's transmitting. 
+
 This circuit is easy to extend to work with more leds. 
