@@ -1,8 +1,9 @@
+IR Remote with ESP8266 (Wemos D1 mini)
+
 TODOS:
 * turn on monitor bias light in the morning
 * add a webpage to be able to control the light and AC from the computer 
 
-IR Remote with ESP8266 (Wemos D1 mini)
 
 Motivation: to be able to control my AC and lights when I'm away from home.
 For example: to cool my room if I'm coming home on a hot summer day or to turn on the light automatically on a certain time.
