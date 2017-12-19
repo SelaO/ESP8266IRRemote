@@ -63,11 +63,11 @@ This is the diagram to make the shield that will sit on the Wemos with the IR le
 
 The calculation for the resistor values was:
 
-$(Vcc - Vled)/I = (5 - 1.4)/0.1 = 36 Ohms$
+R = (Vcc - Vled)/I = (5 - 1.4)/0.2 = 18 Ohms
 
-collector current/Hfe = 0.1/30 = 3.3 mA, 
+collector current/Hfe = 0.1/30 = 3.3 mA
 
-$(3.3 - 0.7)/.0033 = 788 Ohms$ but to keep the transistor saturated I used a lower value. 
+(3.3 - 0.7)/.0033 = 788 Ohms but to keep the transistor saturated I used a lower value. 
 
 I needed the transistor driver circuit to amplify the signal because I have several leds and the AC is far from the leds, it might work for you without the transistor circuit though.
 
