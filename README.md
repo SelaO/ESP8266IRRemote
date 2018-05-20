@@ -93,7 +93,7 @@ This is how you connect it to the leds:
 
 
 
-~~I'm still waiting for the sockets to arrive. I ordered these:
+~~I'm still waiting for the sockets to arrive. I ordered these:~~
 
 https://www.aliexpress.com/item/20-sets-2pin-2-54mm-Pitch-10cm-26AWG-Wire-Pin-Header-Housing-Terminal-Connector-Wire-Connectors/32800965681.html?spm=a2g0s.9042311.0.0.BGoQSD
 
