@@ -104,3 +104,12 @@ Notes:
 To check if the IR led is working, view it with your phone's camera when it's transmitting. 
 
 This circuit is easy to extend to work with more leds. 
+
+IFTTT:
+I used this: https://community.blynk.cc/t/how-to-integrate-blynk-and-ifttt-google-assistant/16107 to add voice control and location triggering with google asistant and IFTTT. 
+
+In IFTTT, the if part is google assitant and location, in the then part:
+
+url: http://{ping blynk-cloud.com}/{project key}/pin/V2
+and the rest: 
+![img](https://i.imgur.com/PVK1lbt.png)
