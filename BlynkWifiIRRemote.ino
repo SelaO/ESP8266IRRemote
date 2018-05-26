@@ -25,11 +25,12 @@ char pass[] = "";
 //#define BLYNK_DEBUG
 #define BLYNK_NO_BUILTIN   // Disable built-in analog & digital pin operations
 #define BLYNK_NO_FLOAT     // Disable float operations
+#define TIMEZONE_OFFSET 2
 
 #include <IRremoteESP8266.h>
 #include <IRsend.h>
-#include <ESP8266WiFi.h> // don't use SSL on the wemos D1 mini since it's too weak
-#include <BlynkSimpleEsp8266.h> 
+#include <ESP8266WiFi.h> 
+#include <BlynkSimpleEsp8266.h> // don't use SSL on the wemos D1 mini since it's too weak
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 extern "C" {
@@ -37,7 +38,7 @@ extern "C" {
 }
 
 WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP);
+NTPClient timeClient(ntpUDP); // to get the real time
 BlynkTimer timer;
 
 IRsend irsend(D3); 
@@ -69,7 +70,7 @@ void sendLastCommandStringBack(String command, int timeout = 5000){
 
 void CheckTurnBiasLightOn(){
   timeClient.update();
-  int currHour = (timeClient.getHours() + 2) % 24;
+  int currHour = (timeClient.getHours() + TIMEZONE_OFFSET) % 24;
   
   if(currHour > 6 && currHour < 22 && !preventBiasLightToday){
     SendIRCommand(BiasLightOn, sizeof(BiasLightOn));  
